@@ -9,8 +9,8 @@
 		<title>Vincenzopio Amendola</title>
 		<link
 			rel="icon"
-			href="images/knight.png"
-			type="image/x-icon" />
+			href="images/yinyang.png"
+			 />
 		<meta charset="utf-8" />
 		<meta
 			name="viewport"
@@ -32,14 +32,9 @@
 						alt=""
 				/></a>
 				<h1>
-					<strong>I am Vincenzopio</strong>, a 24 years old guy based in Napoli, in Italy<br
-						style="display: block !important" />
-					Currently working at
-					<a
-						target="_blank"
-						href="https://www.si2001.it/web/guest"
-						>S.I. 2001</a
-					>
+					<strong>I am Vincenzopio</strong>, a <span id="age"></span> year old guy based in Napoli, Italy<br />
+					Currently working at 
+					<a target="_blank" href="https://www.si2001.it/web/guest">S.I. 2001</a>
 					as Full Stack Developer
 				</h1>
 			</div>
@@ -57,7 +52,7 @@
 					learning about <strong>Node.js</strong>, <strong>MongoDB</strong> and
 					<a
 						target="_blank"
-						href="https://www.oracle.com/cis/database/mern-stack/#:~:text=The%20MERN%20stack%20is%20a%20popular%20framework%20that%20integrates%20JavaScript,Express%2C%20React%2C%20and%20Node."
+						href="https://www.oracle.com/database/mern-stack/"
 						><strong>MERN Stack</strong></a
 					>.
 				</p>
@@ -132,7 +127,7 @@
 			</section>
 
 			<!-- Three -->
-			<section id="three">
+			<!-- <section id="three">
 				<h2>Get In Touch</h2>
 				<p>Feel free to send a message. Ask me anything!</p>
 				<div class="row">
@@ -526,7 +521,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							<span class="label">Linkedin</span></a
 						>
 					</li>
-					<li>
+					<!-- <li>
 						<a
 							href="https://www.instagram.com/nothingnihil_/"
 							class="icon brands fa-instagram">
@@ -539,16 +534,35 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							class="icon brands fa-facebook-f">
 							<span class="label">Facebook</span></a
 						>
-					</li>
+					</li> -->
 				</ul>
 				<ul class="copyright">
-					<li>&copy; 2024</li>
+					<li>&copy; <span id="year"></span></li>
 					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 				</ul>
 			</div>
 		</footer>
 
 		<!-- Scripts -->
+		<script>
+			(function () {
+				const birthYear = 2000; 
+				const birthMonth = 5; 
+				const birthDay = 22; 
+				
+				const today = new Date();
+				const currentYear = today.getFullYear();
+				const birthdayThisYear = new Date(currentYear, birthMonth - 1, birthDay);
+
+				let age = currentYear - birthYear;
+				if (today < birthdayThisYear) {
+					age--; 
+				}
+
+				document.getElementById('age').textContent = age;
+				document.getElementById('year').textContent = currentYear;
+			})();
+		</script>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.poptrox.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>

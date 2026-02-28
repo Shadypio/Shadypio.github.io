@@ -9,7 +9,7 @@ interface ThemeToggleProps {
 export const ThemeToggle = ({ isDark, toggle }: ThemeToggleProps) => (
   <button
     onClick={toggle}
-    className="p-2 rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-200 hover:text-primary-700 dark:hover:text-primary-400 hover:bg-zinc-300 dark:hover:bg-zinc-700 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-50 dark:focus-visible:ring-offset-zinc-950"
+    className="p-2 rounded-full cursor-pointer bg-zinc-200 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-200 hover:text-primary-700 dark:hover:text-primary-400 hover:bg-zinc-300 dark:hover:bg-zinc-700 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-50 dark:focus-visible:ring-offset-zinc-950"
     aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
   >
     <AnimatePresence mode="wait">

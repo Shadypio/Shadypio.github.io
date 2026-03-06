@@ -8,7 +8,17 @@ interface HeroProps {
 }
 
 export const Hero = ({ age }: HeroProps) => (
-  <section id="about" className="pt-32 pb-16 md:pt-48 md:pb-24">
+  <section id="about" className="relative pt-32 pb-16 md:pt-48 md:pb-24 overflow-hidden">
+    {/* Coding GIF background */}
+    <div className="absolute inset-0 -z-10" aria-hidden="true">
+      <img
+        src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmtnZW5yd3hkZjZlaHhwNTc0bGFkbTZ6ODRnc3cyaHFzdWt2NjcxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26tn33aiTi1jkl6H6/giphy.gif"
+        alt=""
+        className="w-full h-[50%] md:h-auto"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-zinc-50/60 via-zinc-50/80 to-zinc-50 dark:from-zinc-950/60 dark:via-zinc-950/80 dark:to-zinc-950" />
+    </div>
+
     <Container>
       <motion.div
         initial={{ opacity: 0, y: 20 }}

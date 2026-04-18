@@ -57,6 +57,6 @@ npm run build
 
 ## Notes
 
-- `process.env.GEMINI_API_KEY` is injected at build time via Vite's `define` option using an `.env` file. See `.env.example` for reference.
+- `process.env.GEMINI_API_KEY` is injected at build time via Vite's `define` option (see `vite.config.ts`) for any Gemini AI features (e.g., chatbot or AI-powered sections). Copy `.env.example` to `.env` and fill in your key to enable them locally.
 - The `@` alias resolves to the repository root, not `src/`.
 - HMR can be disabled by setting `DISABLE_HMR=true` in the environment (used in some AI-assisted editing scenarios).

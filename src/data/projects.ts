@@ -25,4 +25,11 @@ export const projects: Project[] = [
     link: "https://github.com/Shadypio/HakFuJow",
     image: "/images/hakfujow.png",
   },
+  {
+    title: "Small Business E-commerce",
+    description:
+        "A lightweight e-commerce solution designed for small local shops, providing a simple and accessible online storefront to showcase their products and reach customers online.",
+    link: "https://github.com/Shadypio/shop",
+    image: "/images/shop.png",
+},
 ];
